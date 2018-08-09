@@ -28,18 +28,18 @@ while True:
 		# we can modify the frame before display or write
 		# simple binarization of the frame
 		threshold = 68
-		# for i in range(height):
-		# 	for j in range(width):
-		# 		# get the average of BGR
-		# 		gray = sum(frame[i,j])/3
-		# 		# set to black if less than threshold; otherwise, white
-		# 		frame[i,j] = [0,0,0] if gray < threshold else [255,255,255]
+		for i in range(height):
+			for j in range(width):
+				# get the average of BGR
+				gray = sum(frame[i,j])/3
+				# set to black if less than threshold; otherwise, white
+				frame[i,j] = [0,0,0] if gray < threshold else [255,255,255]
 
 		# Pythonic (better) way of doing the same stuff
-		mask = np.sum(frame,2)/3 < threshold
-		frame[mask] = [0,0,0]
-		mask = np.invert(mask)
-		frame[mask] = [255,255,255]
+		# mask = np.sum(frame,2)/3 < threshold
+		# frame[mask] = [0,0,0]
+		# mask = np.invert(mask)
+		# frame[mask] = [255,255,255]
 		
 		cv2.imshow("Video", frame)
 		out.write(frame) # write frame to file
