@@ -28,8 +28,7 @@ print(type(image))
 # access each pixel using coordinates
 for i in range(rows):
 	for j in range(cols):
-		pass
-		# print("[B,G,R] {}".format(image[i,j]))
+		print("[B,G,R] {}".format(image[i,j]))
 		# can access each channel in each pixel
 		# by further adding a third component
 		# e.g. image[i,j,0] to access the B channel

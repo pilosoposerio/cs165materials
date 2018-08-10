@@ -7,18 +7,18 @@ import numpy as np
 
 capture = cv2.VideoCapture("sample.avi")
 
-# check if capture is initialized
 if not capture.isOpened():
 	capture.open()
 
 # get width and height
 width = int(capture.get(cv2.CAP_PROP_FRAME_WIDTH))
 height = int(capture.get(cv2.CAP_PROP_FRAME_HEIGHT))
+dimension = (width,height)
 
 # define video codec for file saving
-fourcc = cv2.VideoWriter_fourcc(*'XVID') # four-char-code
+fourcc = cv2.VideoWriter_fourcc('X','V','I','D') # four-char-code
+# fourcc = cv2.VideoWriter_fourcc(*'XVID') # sequence decompression
 frames_per_second = 20.0
-dimension = (width,height)
 out = cv2.VideoWriter('output.avi', fourcc, frames_per_second, dimension)
 
 while True:
@@ -49,7 +49,7 @@ while True:
 	if cv2.waitKey(1) & 0xFF == ord('q'):
 		break
 
-# release the capture
 capture.release()
+# release the opened file
 out.release()
 cv2.destroyAllWindows()

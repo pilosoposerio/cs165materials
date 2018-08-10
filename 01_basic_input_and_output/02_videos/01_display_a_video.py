@@ -13,7 +13,8 @@ if not capture.isOpened():
 
 while True:
 	ret, frame = capture.read()
-
+	# ret is a boolean that indicates if a frame was 
+	# successfully read
 	if ret:
 		cv2.imshow("Video", frame)
 	else:
