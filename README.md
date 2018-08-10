@@ -8,4 +8,5 @@ Here lies all laboratory materials created for CMSC165: Image Processing
 	- numpy 1.15.0 (numpy)
 
 # Resources
-All sample Python codes were ported and translated from Ms. Dyanara dela Rosa's (@handle) C++ code from the materials used last 1st Semester AY17-18.
+- All sample Python codes were ported and translated from Ms. [Dyanara dela Rosa](https://github.com/handle)'s C++ code from the materials used last 1st Semester AY17-18.
+- [OpenCV 3.4.2 Documentation](https://docs.opencv.org)
